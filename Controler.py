@@ -1,8 +1,8 @@
 import View, Model
 
 def start():
-   choice = View.show_menu()
-   match(choice):
+   choise = View.show_menu()
+   match(choise):
     case 1:
         View.show_phone_book()
     case 2:

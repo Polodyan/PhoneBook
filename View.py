@@ -9,14 +9,14 @@ def show_menu():
     print('6. Удалить контакт')
     print('7. Поиск по контактам')
 
-    choice = int(input('Выберите пункт меню: '))
-    return choice
+    choise = int(input('Выберите пункт меню: '))
+    return choise
 
 def show_phone_book():
     if len(phone_book) < 1:
         print('Телефонная книга пуста')
     else:
-        for item in phnr_book:
+        for item in phone_book:
             print(item)
 
 def input_path():
