@@ -8,6 +8,9 @@ def get_phone_book():
 
 def open_file(path):
     global phone_book 
-    with open('C:\Users\Полина\Desktop\Phone_book\phone_b.txt', 'r', encoding='UTF-8') as file:
+    with open('C:\Users\Полина\Desktop\Phone_book\phone.txt', 'r', encoding='UTF-8') as file:
         data = file.readlines()
-        print(data)
+        #print(data)
+        for item in data:
+            contact = item.replace('\n', '').split(';')
+            phone_book.append(contact)
