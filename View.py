@@ -8,6 +8,7 @@ def show_menu():
     print('4. Изменить контакт')
     print('5. Удалить контакт')
     print('6. Поиск по контактам')
+    print('7. Выход')
     
     choise = int(input('Выберите пункт меню: '))
     return choise
@@ -37,9 +38,15 @@ def input_change():
     return(id, choise, value)
 
 def delete_contact():
-    id = int(input('Введите номер контакта: '))
-    print('Удалить контакт?')
-    choise = input('0 - ДА, 1 - ОТМЕНА')
-    return(id, choise)
+     id = int(input("Удалить контакт: "))
+    return(id)
 
-#def search_contact():
+def search_contact(phone_book):
+    search=input('Введите символ для поиска: ')
+    found=False
+    for contact in phone_book:
+        for item in contact:
+            if search.lower() in item.lower():
+                print(*contact)
+                found=True
+    if not found:print("Ничего не найдено!")  
