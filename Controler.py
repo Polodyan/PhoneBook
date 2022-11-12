@@ -21,11 +21,11 @@ def start():
                 Model.change_contact(*contact)
             
             case 5:
-                id = view.input_delete()
+                id = View.input_delete()
                 model.delete_contact(id)
                 
             case 6:
-               contact=view.search_contact(phone_book)
+               contact=View.search_contact(phone_book)
                
             case _:# exit
                 return False
